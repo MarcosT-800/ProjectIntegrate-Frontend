@@ -6,7 +6,7 @@ import TextField, { TextFieldProps } from '@mui/material/TextField';
 import { alpha, styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import { OutlinedInputProps } from '@mui/material/OutlinedInput';
-import { Container, Header } from './styles';
+import { Container, Header } from './stylesevent';
 
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
@@ -102,9 +102,9 @@ export default function BasicButtons() {
             </div><br/>
 
             <div className='inputs'>
-              <div className='hora_data'>
+              <div>
 
-              <label>Data: </label>
+              <label>Nome: </label>
               <input className='date_input'></input>
 
               <label className='label_horas'>Horas: </label>
@@ -128,8 +128,8 @@ export default function BasicButtons() {
       
 
             <div className='buttongroup'>
-              <Button variant="contained" sx={{ bgcolor: '#1D1D47' }}>Cancelar</Button>
-              <Button variant="contained" sx={{ bgcolor: '#1D1D47' }}>Adicionar</Button>
+              <Button variant="contained" sx={{ bgcolor: '#1D1D47'}}>Cancelar</Button>
+              <Button variant="contained" sx={{ bgcolor: '#1D1D47'}}>Adicionar</Button>
             </div>
           </div>
         </div>
