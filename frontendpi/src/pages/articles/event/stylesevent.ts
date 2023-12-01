@@ -1,9 +1,37 @@
 import styled from 'styled-components';
 
+export const ExitButton = styled.div`
+  position: relative;
+  top: -10px;
+  right: 800px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #1D1D47;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    background: #000;
+  }
+
+  img {
+    width: 24px;
+    height: auto;
+    margin-right: 8px;
+  }
+`;
+
 export const Header = styled.div`
 display: flex;
 flex-direction: row;
 margin-left: 25px;
+width: 100%;
 
 ul {
     display: flex;
@@ -52,8 +80,13 @@ flex-direction: row;
     align-items: center;
     width: 100%;
     height: 100vh;
-    padding: 20px;
 }
+
+@media (max-width: 2126px) {
+        .col-2 {
+            height: 120vh;
+        }
+    }
 
 .cabecalho {
     display: flex;
@@ -84,9 +117,16 @@ border-radius: 300px;
 background: var(--00b8e4, #1D1D47);
 
 }
+
+.hora_data {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;s
+    } 
     .card {
-            width: 70%;
-            height: 70vh;
+            width: 1450px;
+            height: 60vh;
             margin-top: 60px;
             background-color: #fff;
             border: 1px solid #ccc;
@@ -96,7 +136,14 @@ background: var(--00b8e4, #1D1D47);
             flex-direction: column;
             align-items: center;
             text-align: center;
+        } 
+
+    @media (max-width: 2126px) {
+        .card {
+            width: 80%;
+            height: 120vh;
         }
+    }
 
 .inputs {
     display: flex;
@@ -115,10 +162,19 @@ background: var(--00b8e4, #1D1D47);
         line-height: 22px; /* 244.444% */
         letter-spacing: 0.46px;
         text-transform: uppercase;
-    }
+    } 
+    @media (max-width: 2126px) {
+        label{
+            margin-bottom: 0px;
+            margin-top: 20px;
+        }
+  } 
 
     .label_horas {
         margin-left: 90px;
+    } 
+    @media (max-width: 2126px) {
+            margin-left: 0px;
     }
 
     input {
@@ -137,12 +193,27 @@ background: var(--00b8e4, #1D1D47);
         border-radius: 4px;
         border: 2px solid var(--383845, #383845);
         background: #FFF;
-    }
+    } 
+    @media (max-width: 2126px) {
+        .date_input {
+            width: 100%;
+        }
+  } 
 
 
     .resume_input {
         width: 100%;
         height: 200px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        border: 2px solid var(--383845, #383845);
+        background: #FFF;
+        margin-top: 20px;
+    }
+
+    .organize_input {
+        width: 100%;
+        height: 50px;
         flex-shrink: 0;
         border-radius: 4px;
         border: 2px solid var(--383845, #383845);
@@ -157,5 +228,32 @@ background: var(--00b8e4, #1D1D47);
     justify-content: space-between;
     padding-top: 20px;
     width: 50%;
+    margin-top: 20px;
+}
+
+@media (max-width: 2126px) {
+  .inputs {
+    flex-direction: column;
+  } 
+
+  .col2 {
+    background: #1D1D47;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+
+    .hora_data {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    } 
+    .label_horas {
+        margin-left: 0px;
+    }
 }
 `

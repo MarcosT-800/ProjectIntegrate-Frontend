@@ -6,7 +6,14 @@ import TextField, { TextFieldProps } from '@mui/material/TextField';
 import { alpha, styled } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import { OutlinedInputProps } from '@mui/material/OutlinedInput';
-import { Container, Header } from './stylesevent';
+import { Container, Header, ExitButton, ExitIcon } from './stylescerficate';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import Table from '@mui/material/Table';
+
 
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
@@ -90,50 +97,61 @@ export default function BasicButtons() {
         </ul>
       </Header>
       <Container>
-        <div className='col-2'>
-          <div className='card'>
-            <div className='cabecalho'>
-              {/*               <div className='seta'>Seta de sair</div>
- */}              <h1>CRIAR EVENTO</h1>
-            </div>
-            <div className='inputs'>
-              <label className='name_input'>Nome:</label>
-              <input></input>
-            </div><br/>
-
-            <div className='inputs'>
-              <div>
-
-              <label>Nome: </label>
-              <input className='date_input'></input>
-
-              <label className='label_horas'>Horas: </label>
-              <input className='date_input'></input>
-              </div>
-
-            </div>
-
-            <div className='inputs'>
-              <label>Rese: </label>
-              <input className='resume_input'></input>
-
-            </div>
-
-            <div className='inputs'>
-              <label>Orga: </label>
-              <input className='organize_input'></input>
-
-            </div>
-
-      
-
-            <div className='buttongroup'>
-              <Button variant="contained" sx={{ bgcolor: '#1D1D47'}}>Cancelar</Button>
-              <Button variant="contained" sx={{ bgcolor: '#1D1D47'}}>Adicionar</Button>
-            </div>
-          </div>
-        </div>
-      </Container>
+  <div className='col-2'>
+    <div className='card'>
+      <div className='cabecalho'>
+        <h1>CRIAR EVENTO</h1>
+        <ExitButton>
+  <img src="exit-arrow.png" />
+</ExitButton>
+      </div>
+      <Table>
+        <thead>
+          <tr>
+            <th>Participantes</th>
+            <th>Selecionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GUSTAVO CARDOSO BARROS</td>
+            <td>
+              <Radio name="name" value="name" />
+            </td>
+          </tr>
+          <tr>
+            <td>BRUNO SILVEIRA DIONIOSIO</td>
+            <td>
+              <Radio name="name" value="name" />
+            </td>
+          </tr>
+          <tr>
+            <td>ITALLO DA SILVA SANTOS</td>
+            <td>
+              <Radio name="name" value="name" />
+            </td>
+          </tr>
+          <tr>
+            <td>LUCAS WERNEK GARCIA DOS SANTOS</td>
+            <td>
+              <Radio name="name" value="name" />
+            </td>
+          </tr>
+          <tr>
+            <td>VICTOR GABRIEL MONTEIRO</td>
+            <td>
+              <Radio name="name" value="name" />
+            </td>
+          </tr>
+        </tbody>
+      </Table>
+      <div className='buttongroup'>
+        <Button variant="contained" sx={{ bgcolor: '#1D1D47' }}>Enviar p/Todos</Button>
+        <Button variant="contained" sx={{ bgcolor: '#1D1D47' }}>Enviar</Button>
+      </div>
+    </div>
+  </div>
+</Container>
     </>
   );
 }
